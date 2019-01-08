@@ -1,0 +1,97 @@
+head	1.4;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.4
+date	2019.01.08.12.13.12;	author richard;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2019.01.08.12.12.00;	author richard;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2019.01.08.12.03.40;	author richard;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2019.01.08.11.52.15;	author richard;	state Exp;
+branches;
+next	;
+
+
+desc
+@The beginning of a new DOS text Utility
+@
+
+
+1.4
+log
+@Deomstratoin of RCS Subsitutions, made mistake
+@
+text
+@/* dos-cvrt.c */
+
+static const char rcsid[] = "$Id: dos_cvrt.c,v 1.3 2019/01/08 12:12:00 richard Exp richard $";
+
+/* Revision History:
+ * $Log: dos_cvrt.c,v $
+ * Revision 1.3  2019/01/08 12:12:00  richard
+ * Demonstration of RCS substitutions
+ *
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main(argc, char **argv) {
+	puts("dos_cvrt.c version $Revision$");
+
+	return 0;
+}
+@
+
+
+1.3
+log
+@Demonstration of RCS substitutions
+@
+text
+@d3 1
+a3 1
+static const char rcsid[] = "$Id$";
+d6 4
+a9 1
+ * $Log$
+d17 1
+a17 1
+	puts("dos_cvrt.c version $Revision%");
+@
+
+
+1.2
+log
+@Added include files stdlib.h and unistd.h
+@
+text
+@d2 7
+d14 1
+a14 1
+	puts("dos_cvrt.c");
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 2
+@
